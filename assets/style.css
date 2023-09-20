@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.cuerpo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F4EB;
+    margin-bottom: 10px;
+}
+
+.header label {
+    font-size: 20px;
+}
+
+.header select {
+    width: 75%;
+    font-size: 15px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    align-items: center;
+    background-color: #749BC2;
+}
+
+.nombre {
+    height: 15%;
+}
+
+.nombre i {
+    padding-top: 5vh;
+    text-align: center;
+    color: #fff;
+}
+
+.lista ul {
+    height: 30vh;
+    list-style: none;
+    font-size: 30px;
+    color: #fff;
+}
+
+.contacto {
+    padding-top: 40px;
+    height: 20vh;
+    width: 100%;
+    font-size: 35px;
+    background-color: #4682A9;
+    text-align: center;
+    color: #fff;
+}
+
+.paginacion {
+    margin: 20px 0;
+}
+
+.paginacion ul {
+    list-style: none;
+    text-align: center;
+}
+
+.paginacion ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #024959;
+    text-decoration: none;
+}
+
+.paginacion ul li:hover {
+    background: #037E8C;
+}
+
+.container {
+    display: grid;
+    grid-area: container;
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 75px;
+}
+
+.box {
+    height: 250px;
+    width: 200px;
+    border: solid 1px black;
+    margin: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box button {
+    background-color: #024959;
+    color: #fff;
+    width: 75%;
+}
+
+.box img {
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .cuerpo {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas:
+            "navbar header"
+            "navbar container"
+            "navbar footer";
+        grid-template-rows: 10% 1fr 10%;
+        grid-template-columns: 15% 1fr;
+    }
+
+    .box {
+        height: 250px;
+        width: 200px;
+        border: solid 1px black;
+        margin: 20px 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #F6F4EB;
+    }
+    .navbar {
+        grid-area: navbar;
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        align-items: center;
+        background-color: #749BC2;
+    }
+    
+    .nombre {
+        height: 15%;
+    }
+    
+    .nombre i {
+        padding-top: 5vh;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .lista ul {
+        height: 70vh;
+        list-style: none;
+        font-size: 30px;
+        color: #fff;
+    }
+    
+    .contacto {
+        padding-top: 40px;
+        height: 20vh;
+        font-size: 35px;
+        background-color: #4682A9;
+        text-align: center;
+        color: #fff;
+    }
+}
